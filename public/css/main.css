@@ -1,0 +1,193 @@
+@import '/static/css/font-awesome.css';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html, body {
+	font-family: 'Roboto', 'Arial';
+	height: 100%;
+	position: relative;
+}
+
+h1, h2, h3, h4, h5, a, span, p, blockquote {
+	font-weight: 100;
+	color: #444;
+	line-height: 1.5em;
+}
+
+a {
+	text-decoration: none;
+}
+
+.header {
+	position: fixed;
+	background: rgba(30, 30, 30, 0.9);
+	width: 100%;
+	height: 50px;
+	z-index: 1;
+	display: flex;
+}
+
+.logo-wrap {
+	flex-grow: 1;
+}
+
+.logo {
+	color: #0fd2d4;
+	font-size: 17px;
+	height: 50px;
+	line-height: 50px;
+	padding: 0 20px;
+	display: inline-block;
+	cursor: pointer;
+	user-select: none;
+	-webkit-user-select: none;
+	transition: 0.2s background-color;
+}
+
+.logo:hover {
+	background: rgba(0, 0, 0, 0.5);
+}
+
+.nav {
+	padding-right: 10px;
+}
+
+.nav a {
+	color: #fff;
+	height: 50px;
+	line-height: 50px;
+	margin: 0 12px;
+	display: inline-block;
+	font-size: 15px;
+	border-bottom: solid 3px transparent;
+	box-sizing: border-box;
+	transition: 0.3s border-color, 0.2s color;
+}
+
+.nav a:hover, .nav a.active {
+	color: #0fd2d4;
+	border-bottom-color: #0fd2d4;
+}
+
+.main-section {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background: url('/static/images/piano-bg.png') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+}
+
+.jumbo-text {
+	font-size: 80px;
+	color: #fff;
+	margin-bottom: 20px;
+}
+
+.jumbo-sub-text {
+	font-size: 35px;
+	color: #0fd2d4;
+}
+
+.quote-section {
+	padding: 50px 20px;
+	display: flex;
+	justify-content: center;
+}
+
+.quote-text {
+	font-size: 36px;
+	font-weight: 300;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.quote-person {
+	display: block;
+	text-align: right;
+	font-size: 15px;
+	color: #999;
+}
+
+.profile-section {
+	padding-bottom: 50px;
+	max-width: 800px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.profile-pic {
+	width: 239px;
+	height: 336px;
+}
+
+.profile-text {
+	font-size: 24px;
+	flex-grow: 1;
+	margin-left: 50px;
+}
+
+.gallery-section {
+	position: relative;
+	background: #000;
+}
+
+.gallery-video {
+	width: 100%;
+	height: inherit;
+}
+
+.video-controls {
+	position: absolute;
+	left: 0;
+	width: 100%;
+	top: 0;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background: rgba(0, 0, 0, 0);
+	transition: 0.5s background;
+}
+
+.gallery-section:hover .video-controls {
+	background: rgba(0, 0, 0, 0.2);
+}
+
+.gallery-section.is-playing .video-controls {
+	background: rgba(0, 0, 0, 0);
+}
+
+.video-controls i {
+	color: rgba(255, 255, 255, 0.7);
+	font-size: 60px;
+	transition: 0.5s color;
+}
+
+.video-controls .pause-button {
+	display: none;
+	color: rgba(255, 255, 255, 0);
+}
+
+.gallery-section:hover .video-controls .play-button {
+	color: rgba(255, 255, 255, 0.9);
+}
+
+.gallery-section:hover .video-controls .pause-button {
+	color: rgba(255, 255, 255, 0.2);
+}
+
+.gallery-section .video-controls i.fa:hover {
+	color: rgba(255, 255, 255, 1);
+}
+
