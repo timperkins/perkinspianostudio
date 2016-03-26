@@ -1,6 +1,9 @@
 $(function() {
 	$('body').timNav({
 		combos: [{
+				link: $('.logo-link'),
+				section: $('.main-section'),
+			}, {
 				link: $('.about-link'),
 				section: $('.quote-section'),
 			}, {

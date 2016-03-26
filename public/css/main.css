@@ -34,7 +34,7 @@ a {
 	flex-grow: 1;
 }
 
-.logo {
+.logo-link {
 	color: #0fd2d4;
 	font-size: 17px;
 	height: 50px;
@@ -45,10 +45,12 @@ a {
 	user-select: none;
 	-webkit-user-select: none;
 	transition: 0.2s background-color;
+	cursor: default;
 }
 
-.logo:hover {
+.logo-link:not(.active):hover {
 	background: rgba(0, 0, 0, 0.5);
+	cursor: pointer;
 }
 
 .nav {
@@ -67,7 +69,11 @@ a {
 	transition: 0.3s border-color, 0.2s color;
 }
 
-.nav a:hover, .nav a.active {
+.nav a:hover {
+	border-bottom-color: #fff;
+}
+
+.nav a.active {
 	color: #0fd2d4;
 	border-bottom-color: #0fd2d4;
 }

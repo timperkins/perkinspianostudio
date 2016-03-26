@@ -7,19 +7,23 @@
 		}, opts);
 
 		var $el = this;
-		var activeSection, activeLink;
+		var animationInProgress = false;
+		var activeLink;
 
 		opts.combos.forEach(function(combo) {
 			combo.link.on('click', function(e) {
 				e.preventDefault();
+				if (animationInProgress) { return; }
+				animationInProgress = true;
 				$('html, body').animate({
 					scrollTop: combo.section.offset().top - opts.offset
-				}, 500);
+				}, {
+					duration: 500,
+					complete: function() {
+						animationInProgress = false;
+					}
+				});
 				activate(combo.link);
-				// if (activeLink) {
-				// 	activeLink.removeClass(opts.activeClass);
-
-				// }
 			});
 		});
 
@@ -27,8 +31,9 @@
 		onScroll();
 
 		function onScroll() {
+			if (animationInProgress) { return; }
 			var scrollHeight = $(window).scrollTop() + opts.offset;
-			var closestSectionTop = 0;
+			var closestSectionTop = -1;
 			var closestLink, closestSection;
 			opts.combos.forEach(function(o) {
 				var sectionTop = o.section.offset().top;
@@ -39,23 +44,6 @@
 				}
 			});
 			activate(closestLink);
-			// if (!closestLink) {
-			// 	if (activeLink) {
-			// 		activeLink.removeClass(opts.activeClass);
-			// 		activeLink = null;
-			// 	}
-			// 	return;
-			// }
-			// if (!closestLink.is(activeLink)) {
-			// 	if (activeLink) {
-			// 		activeLink.removeClass(opts.activeClass);
-			// 	}
-			// 	activeLink = closestLink;
-			// 	activeLink.addClass(opts.activeClass);
-			// }
-			// if (!closestSection.is(activeSection)) {
-			// 	activeSection = closestSection;
-			// }
 		}
 
 		function activate(link) {
