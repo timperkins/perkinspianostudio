@@ -10,7 +10,7 @@ var config = {
   serverFolder: path.resolve(__dirname)
 };
 
-app.use(favicon(path.join(config.distFolder, 'my-favicon.ico')));
+app.use(favicon(path.join(config.distFolder, 'images/favicon-circle.ico')));
 app.use('/static', express.static(config.distFolder));
 app.use(bodyParser.json());
 
