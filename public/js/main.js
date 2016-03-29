@@ -21,4 +21,6 @@ $(function() {
 		playButton: '.play-button',
 		pauseButton: '.pause-button'
 	});
+
+	$('.audio-player').timAud();
 });
