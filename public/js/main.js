@@ -10,7 +10,9 @@ $(function() {
 				link: $('.gallery-link'),
 				section: $('.gallery-section')
 			}],
-		offset: $('.header').height()
+		offset: $('.header').height(),
+		navLink: $('.nav-link'),
+		nav: $('.nav')
 	});
 
 	$('.gallery-section').timVid({

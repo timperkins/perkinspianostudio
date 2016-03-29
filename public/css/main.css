@@ -55,9 +55,10 @@ a {
 
 .nav {
 	padding-right: 10px;
+	display: flex;
 }
 
-.nav a {
+.nav a, .nav-link {
 	color: #fff;
 	height: 50px;
 	line-height: 50px;
@@ -76,6 +77,55 @@ a {
 .nav a.active {
 	color: #0fd2d4;
 	border-bottom-color: #0fd2d4;
+}
+
+.nav-link {
+	font-size: 20px;
+	display: none;
+}
+
+.nav-link:hover {
+	border-bottom-color: transparent;
+	color: rgba(255, 255, 255, 0.7);
+}
+
+@media screen and (max-width: 600px) {
+	.nav-link {
+		display: inline-block;
+	}
+	.nav {
+		position: absolute;
+		left: 0;
+		width: 100%;
+		top: 50px;
+		display: none;
+	}
+	.nav a {
+		display: block;
+		padding-left: 30px;
+		margin: 0;
+		height: 40px;
+		line-height: 40px;
+		background: rgba(30, 30, 30, 0.9);
+		font-size: 15px;
+		border-left: solid 5px transparent;
+		border-bottom: none;
+	}
+	.nav a:last-child:after {
+		content: '';
+		display: block;
+		background: rgba(30, 30, 30, 0.9);
+		height: 10px;
+		margin-left: -35px;
+	}
+	.nav a.active, .nav a:hover {
+		border-bottom-color: transparent;
+		color: #fff;
+		border-left-color: #0fd2d4
+	}
+	.nav a:not(.active):hover {
+		border-left-color: #fff;
+	}
 }
 
 .main-section {

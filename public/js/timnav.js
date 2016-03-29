@@ -3,7 +3,9 @@
 		opts = $.extend({
 			combos: {},
 			activeClass: 'active',
-			offset: 0
+			offset: 0,
+			navLink: null,
+			nav: null
 		}, opts);
 
 		var $el = this;
@@ -29,6 +31,18 @@
 
 		$(window).on('scroll', debounce(onScroll, 20));
 		onScroll();
+
+		opts.navLink.on('click', function(e) {
+			e.preventDefault();
+			e.stopPropagation();
+			opts.nav.slideToggle();
+		});
+
+		$(window).on('click', function(e) {
+			if (opts.nav.is(':visible') && opts.navLink.is(':visible')) {
+				opts.nav.slideToggle();
+			}
+		});
 
 		function onScroll() {
 			if (animationInProgress) { return; }
