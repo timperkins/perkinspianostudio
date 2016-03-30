@@ -11,7 +11,7 @@ html, body {
 	position: relative;
 }
 
-h1, h2, h3, h4, h5, a, span, p, blockquote {
+h1, h2, h3, h4, h5, a, span, p, blockquote, input, label {
 	font-weight: 100;
 	color: #444;
 	line-height: 1.5em;
@@ -20,12 +20,66 @@ h1, h2, h3, h4, h5, a, span, p, blockquote {
 .section-header {
 	font-size: 36px;
 	text-align: center;
-	margin: 40px 0;
+	margin-bottom: 40px;
 	color: #666;
+}
+
+.dark-section {
+	background: #555;
+}
+
+.dark-section *:not(.input-field):not(.input-text) {
+	color: #fff;
 }
 
 a {
 	text-decoration: none;
+}
+
+.input-group {
+	margin-bottom: 10px;
+}
+
+.input-label {
+	display: block;
+	font-size: 20px;
+	margin-bottom: 5px;
+}
+
+.input-field, .input-text {
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border: none;
+	padding: 6px 10px;
+	font-size: 17px;
+	outline: none;
+	border-radius: 3px;
+	font-weight: 200;
+	color: #222;
+}
+
+.input-field::-webkit-input-placeholder, 
+.input-text::-webkit-input-placeholder {
+   color: #aaa;
+}
+
+.input-text {
+	height: 100px;
+}
+
+.form-submit {
+	background: #31c4c6;
+	border: none;
+	border-radius: 3px;
+	padding: 10px 40px;
+	font-size: 15px;
+	font-weight: 300;
+	cursor: pointer;
+}
+
+.form-submit:hover {
+	background: #35babb;
 }
 
 .header {
@@ -42,7 +96,7 @@ a {
 }
 
 .logo-link {
-	color: #0fd2d4;
+	color: #31c4c6;
 	font-size: 17px;
 	height: 50px;
 	line-height: 50px;
@@ -82,8 +136,8 @@ a {
 }
 
 .nav a.active {
-	color: #0fd2d4;
-	border-bottom-color: #0fd2d4;
+	color: #31c4c6;
+	border-bottom-color: #31c4c6;
 }
 
 .nav-link {
@@ -128,7 +182,7 @@ a {
 	.nav a.active, .nav a:hover {
 		border-bottom-color: transparent;
 		color: #fff;
-		border-left-color: #0fd2d4
+		border-left-color: #31c4c6
 	}
 	.nav a:not(.active):hover {
 		border-left-color: #fff;
@@ -158,7 +212,7 @@ a {
 
 .jumbo-sub-text {
 	font-size: 35px;
-	color: #0fd2d4;
+	color: #31c4c6;
 }
 
 .quote-section {
@@ -255,7 +309,7 @@ a {
 }
 
 .listen-section {
-	padding: 0 10px;
+	padding: 50px 10px;
 }
 
 .audio-container {
@@ -273,4 +327,24 @@ a {
 	.audio-container > * {
 		width: 100%;
 	}
+}
+
+.contact-section {
+	padding: 50px 20px;
+}
+
+.contact-form {
+	max-width: 500px;
+	margin: 0 auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.contact-form .input-group {
+	width: 100%;
+}
+
+.contact-form .form-submit {
+	margin-left: auto;
+	margin-top: 10px;
 }

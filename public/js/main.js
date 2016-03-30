@@ -9,6 +9,9 @@ $(function() {
 			}, {
 				link: $('.gallery-link'),
 				section: $('.gallery-section')
+			}, {
+				link: $('.contact-link'),
+				section: $('.contact-section')
 			}],
 		offset: $('.header').height(),
 		navLink: $('.nav-link'),
