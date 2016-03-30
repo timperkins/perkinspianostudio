@@ -3,6 +3,13 @@
 	align-items: center;
 	padding: 10px 20px;
 	box-sizing: border-box;
+	cursor: default;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
 }
 
 .tim-aud-play-button, .tim-aud-pause-button {
@@ -23,13 +30,13 @@
 
 .tim-aud-pause-button {
 	padding-left: 8px;
-	color: #0fd2d4;
-	border-color: #0fd2d4;
+	color: #31c4c6;
+	border-color: #31c4c6;
 }
 
 .tim-aud-play-button:hover {
-	color: #0fd2d4;
-	border-color: #0fd2d4;
+	color: #31c4c6;
+	border-color: #31c4c6;
 }
 
 .tim-aud-song-title {
@@ -73,10 +80,32 @@
 	height: 4px;
 	background: #fff;
 	flex-grow: 1;
+	position: relative;
+}
+
+.tim-aud-slider-handle {
+	width: 10px;
+	height: 10px;
+	background: #999;
+	border: solid 1px #666;
+	border-radius: 6px;
+	position: absolute;
+	left: 0;
+	top: -4px;
+	z-index: 1;
 }
 
 .tim-aud-time-remaining {
 	margin-left: 10px;
+}
+
+.tim-aud-buffer-indicator {
+	height: 4px;
+	background: #e6e6e6;
+	position: absolute;
+	top: 0;
+	left: 0;
+	min-width: 1px;
 }
 
 .state-initial .tim-aud-play-button, .state-pause .tim-aud-play-button {
