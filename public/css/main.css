@@ -20,7 +20,7 @@ h1, h2, h3, h4, h5, a, span, p, blockquote, input, label {
 .section-header {
 	font-size: 36px;
 	text-align: center;
-	margin-bottom: 40px;
+	margin: 0 20px 40px 20px;
 	color: #666;
 }
 
@@ -366,7 +366,13 @@ a {
 }
 
 .listen-section {
-	padding: 50px 10px;
+	padding: 50px 10px 100px 10px;
+}
+
+@media screen and (max-width: 700px) {
+	.listen-section {
+		padding: 50px 0 100px 0;
+	}
 }
 
 .audio-container {
@@ -384,6 +390,70 @@ a {
 	.audio-container > * {
 		width: 100%;
 	}
+}
+
+.details-section {
+	margin-bottom: 80px;
+}
+
+@media screen and (max-width: 600px) {
+	.details-section {
+		margin-bottom: 0;
+	}
+}
+
+.details-wrap {
+	background: #f6f6f6;
+	border-radius: 3px;
+	margin: 0 auto;
+	max-width: 960px;
+	box-sizing: border-box;
+	display: flex;
+	flex-wrap: wrap;
+	align-content: stretch;
+}
+
+@media screen and (max-width: 600px) {
+	.details-wrap {
+		border-radius: 0;
+	}
+}
+
+.details-container {
+	padding: 20px 20px 30px 20px;
+	box-sizing: border-box;
+	width: 50%;
+	position: relative;
+	margin-bottom: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.details-container {
+		width: 100%;
+	}
+	.details-container:last-child {
+		margin-bottom: 60px;
+	}
+}
+
+.details-container h3 {
+	font-weight: 300;
+	font-size: 18px;
+	margin-bottom: 10px;
+}
+
+.details-container p {
+	font-size: 17px;
+}
+
+.details-container:after {
+	content: '';
+	border-bottom: solid 2px #31c4c6;
+	width: 50px;
+	display: inline-block;
+	position: absolute;
+	left: 20px;
+	bottom: 0;
 }
 
 .contact-section {
