@@ -35,12 +35,20 @@
 		opts.navLink.on('click', function(e) {
 			e.preventDefault();
 			e.stopPropagation();
-			opts.nav.slideToggle();
+			opts.nav.slideToggle(500, function() {
+				if (opts.nav.is(':hidden')) {
+					opts.nav.removeAttr('style');
+				}
+			});
 		});
 
 		$(window).on('click', function(e) {
 			if (opts.nav.is(':visible') && opts.navLink.is(':visible')) {
-				opts.nav.slideToggle();
+				opts.nav.slideToggle(500, function() {
+					if (opts.nav.is(':hidden')) {
+						opts.nav.removeAttr('style');
+					}
+				});
 			}
 		});
 
