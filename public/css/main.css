@@ -24,6 +24,12 @@ h1, h2, h3, h4, h5, a, span, p, blockquote, input, label {
 	color: #666;
 }
 
+@media screen and (max-width: 600px) {
+	.section-header {
+		font-size: 28px;
+	}
+}
+
 .dark-section {
 	background: #555;
 }
@@ -208,11 +214,25 @@ a {
 	font-size: 80px;
 	color: #fff;
 	margin-bottom: 20px;
+	padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.jumbo-text {
+		font-size: 50px;
+	}
 }
 
 .jumbo-sub-text {
 	font-size: 35px;
 	color: #31c4c6;
+	padding: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.jumbo-sub-text {
+		font-size: 24px;
+	}
 }
 
 .quote-section {
@@ -228,6 +248,12 @@ a {
 	margin-bottom: 10px;
 }
 
+@media screen and (max-width: 600px) {
+	.quote-text {
+		font-size: 28px;
+	}
+}
+
 .quote-person {
 	display: block;
 	text-align: right;
@@ -236,21 +262,46 @@ a {
 }
 
 .profile-section {
-	padding-bottom: 50px;
+	padding: 0 20px 50px 20px;
 	max-width: 800px;
 	margin: 0 auto;
 	display: flex;
 }
 
+@media screen and (max-width: 600px) {
+	.profile-section {
+		flex-direction: column;
+		align-items: center;
+	}
+}
+
 .profile-pic {
 	width: 239px;
 	height: 336px;
+	max-width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+	.profile-pic {
+		order: 2;
+	}
 }
 
 .profile-text {
 	font-size: 24px;
 	flex-grow: 1;
 	margin-left: 50px;
+}
+
+@media screen and (max-width: 600px) {
+	.profile-text {
+		font-size: 18px;
+		order: 1;
+		margin-left: 0;
+		margin-bottom: 30px;
+		border-top: solid 1px #eee;
+		padding-top: 30px;
+	}
 }
 
 .gallery-section {
@@ -289,6 +340,12 @@ a {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 60px;
 	transition: 0.5s color;
+}
+
+@media screen and (max-width: 600px) {
+	.video-controls i {
+		font-size: 40px;
+	}
 }
 
 .video-controls .pause-button {
