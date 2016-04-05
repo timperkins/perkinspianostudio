@@ -26,4 +26,6 @@ $(function() {
 	});
 
 	$('.audio-player').timAud();
+
+	$('.main-section').timLoad();
 });
