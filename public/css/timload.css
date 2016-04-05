@@ -10,6 +10,7 @@
 	align-items: center;
 }
 .tim-load-spinner {
-	font-size: 20px;
-	color: #393939;
+	font-size: 40px;
+	color: #444;
+	display: none;
 }

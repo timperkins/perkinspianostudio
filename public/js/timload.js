@@ -8,7 +8,7 @@
 			opts = $.extend({}, opts);
 
 			var $overlay = $('<div class="tim-load-overlay"></div>').appendTo($el);
-			var $spinner = $('<i class="fa fa-refresh fa-spin tim-load-spinner"></i>').appendTo($overlay);
+			var $spinner = $('<i class="fa fa-circle-o-notch fa-spin tim-load-spinner"></i>').appendTo($overlay).fadeIn(1000);
 
 			var src = $el.css('background-image')
 				.replace('url("', '')
