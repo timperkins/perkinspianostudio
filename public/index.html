@@ -96,16 +96,22 @@
 		</section>
 		<section class="contact-section dark-section">
 			<h2 class="section-header">Contact Penny</h2>
-			<form class="contact-form">
+			<form class="contact-form" data-timform>
+				<input type="hidden" name="_subject" value="Perkins Piano Studio">
 				<div class="input-group">
 					<label class="input-label">Name</label>
-					<input type="text" class="input-field">
+					<input type="text" class="input-field" name="name">
+				</div>
+				<div class="input-group">
+					<label class="input-label">Email</label>
+					<input type="text" class="input-field" name="_replyto">
 				</div>
 				<div class="input-group">
 					<label class="input-label">Message</label>
-					<textarea class="input-text" placeholder="Request lesson pricing, schedule audition, etc."></textarea>
+					<textarea class="input-text" placeholder="Request lesson pricing, schedule audition, etc." name="message"></textarea>
 				</div>
 				<input type="submit" value="Send" class="form-submit">
+				<p class="form-sent" data-timform-success>Submission success! Penny will get back with you soon!</p>
 			</form>
 		</section>
 
@@ -114,6 +120,7 @@
 		<script src="/static/js/timnav.js"></script>
 		<script src="/static/js/timvid.js"></script>
 		<script src="/static/js/timaud.js"></script>
+		<script src="/static/js/timform.js"></script>
 		<script src="/static/js/main.js"></script>
 		<script>
 			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
