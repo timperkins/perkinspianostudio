@@ -86,13 +86,12 @@
 		function debounce(fn, delay) {
 			var timeoutId;
 			return function(e) {
-				if (timeoutId) {
-					clearTimeout(timeoutId);
+				if (!timeoutId) {
+					timeoutId = setTimeout(function() {
+						fn.call(fn, e);
+						timeoutId = null;
+					}, delay);
 				}
-				timeoutId = setTimeout(function() {
-					fn.call(fn, e);
-					timeoutId = null;
-				}, delay);
 			};
 		}
 	};
