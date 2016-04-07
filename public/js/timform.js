@@ -1,5 +1,5 @@
 (function($) {
-	var EMAIL = 'tjp503@gmail.com';
+	var EMAIL = 'penny.perkins19@gmail.com';
 	$.fn.timForm = function(opts) {
 		this.each(function() {
 			initialize($(this));
