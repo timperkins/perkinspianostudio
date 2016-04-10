@@ -24,7 +24,7 @@
 						if (!didShow) {
 							show($el);
 						}
-					}, 1000);
+					}, 3000);
 				});
 			function show($img) {
 				$img.remove();
