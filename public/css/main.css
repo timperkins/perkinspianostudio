@@ -17,6 +17,10 @@ h1, h2, h3, h4, h5, a, span, p, blockquote, input, label {
 	line-height: 1.5em;
 }
 
+input {
+	-webkit-appearance: none;
+}
+
 .section-header {
 	font-size: 36px;
 	text-align: center;
