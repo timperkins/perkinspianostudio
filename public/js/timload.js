@@ -13,10 +13,31 @@
 			var src = $el.css('background-image')
 				.replace('url("', '')
 				.replace('")', '');
-			$('<img/>').attr('src', src).on('load', function() {
-				$(this).remove();
+			$('<img/>')
+				.attr('src', src)
+				.on('load', function() {
+					alert(1);
+					show($(this));
+				}).each(function() {
+					if ($(this).isLoaded()) {
+						alert(2);
+						show($(this));
+					}
+				});
+			function show($img) {
+				$img.remove();
 				$overlay.fadeOut(200);
-			});
+			}
 		}
 	};
+	$.fn.isLoaded = function() {
+		var img = this.get(0);
+		if (!img.complete) {
+			return false;
+		}
+		if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) {
+			return false;
+		}
+		return true;
+	}
 })(jQuery);
