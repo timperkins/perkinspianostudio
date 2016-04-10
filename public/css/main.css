@@ -242,7 +242,7 @@ a {
 	}
 }
 
-@media screen and (max-height: 350px) {
+@media screen and (max-height: 400px) {
 	.jumbo-text {
 		margin-bottom: 0;
 	}
