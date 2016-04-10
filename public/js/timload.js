@@ -10,36 +10,27 @@
 			var $overlay = $('<div class="tim-load-overlay"></div>').appendTo($el);
 			var $spinner = $('<i class="fa fa-circle-o-notch fa-spin tim-load-spinner"></i>').appendTo($overlay).fadeIn(1000);
 
+			var didShow = false;
 			var src = $el.css('background-image')
 				.replace('url("', '')
 				.replace('")', '');
 			$('<img/>')
 				.attr('src', src)
 				.on('load', function() {
-					alert(1);
 					show($(this));
 				}).each(function() {
-					alert(this.complete);
-					// if ($(this).isLoaded()) {
-					// 	alert(2);
-					// 	show($(this));
-					// }
+					var $el = $(this);
+					setTimeout(function() {
+						if (!didShow) {
+							show($el);
+						}
+					}, 1000);
 				});
 			function show($img) {
 				$img.remove();
 				$overlay.fadeOut(200);
+				didShow = true;
 			}
 		}
 	};
-	$.fn.isLoaded = function() {
-		var img = this.get(0);
-		alert(img.complete);
-		if (!img.complete) {
-			return false;
-		}
-		if (typeof img.naturalWidth !== "undefined" && img.naturalWidth === 0) {
-			return false;
-		}
-		return true;
-	}
 })(jQuery);
