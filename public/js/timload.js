@@ -19,6 +19,7 @@
 					alert(1);
 					show($(this));
 				}).each(function() {
+					alert(3);
 					if ($(this).isLoaded()) {
 						alert(2);
 						show($(this));
