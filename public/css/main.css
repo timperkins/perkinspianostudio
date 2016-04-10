@@ -359,6 +359,11 @@ a {
 	background: rgba(0, 0, 0, 0);
 }
 
+/* Hide ios html5 video controls */
+video::-webkit-media-controls {
+    display:none !important;
+}
+
 .video-controls i {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 60px;
