@@ -28,4 +28,9 @@ $(function() {
 	$('.audio-player').timAud();
 
 	$('.main-section').timLoad();
+
+	// Set the main-section height to the window height
+	// so that the page isn't choppy on ios when the search bar
+	// is hidden
+	$('.main-section').height($(window).height());
 });
