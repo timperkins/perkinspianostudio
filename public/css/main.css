@@ -306,6 +306,7 @@ a {
 	width: 239px;
 	height: 336px;
 	max-width: 100%;
+	min-width: 239px;
 }
 
 @media screen and (max-width: 600px) {
