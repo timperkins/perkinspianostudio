@@ -19,10 +19,11 @@
 					alert(1);
 					show($(this));
 				}).each(function() {
-					if ($(this).isLoaded()) {
-						alert(2);
-						show($(this));
-					}
+					alert(this.complete);
+					// if ($(this).isLoaded()) {
+					// 	alert(2);
+					// 	show($(this));
+					// }
 				});
 			function show($img) {
 				$img.remove();
