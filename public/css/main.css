@@ -1,4 +1,4 @@
-@import '/static/css/font-awesome.css';
+@import '/css/font-awesome.css';
 
 * {
 	margin: 0;
@@ -203,7 +203,7 @@ a {
 	position: relative;
 	height: 100%;
 	width: 100%;
-	background: url('/static/images/penny.jpg') no-repeat top center;
+	background: url('/images/penny.jpg') no-repeat top center;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
