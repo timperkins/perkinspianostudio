@@ -11,13 +11,8 @@ var config = {
 };
 
 app.use(favicon(path.join(config.distFolder, 'images/favicon-circle.ico')));
-app.use('/static', express.static(config.distFolder));
+app.use('/', express.static(config.distFolder));
 app.use(bodyParser.json());
-
-app.all('/*', (req, res) => {
-  // Just send the index.html for other files to support HTML5Mode
-  res.sendFile('index.html', { root: config.distFolder });
-});
 
 app.listen(config.port, () => {
   console.log('Server started at port: ' + config.port);
