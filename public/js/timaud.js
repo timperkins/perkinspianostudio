@@ -16,8 +16,7 @@
 		});
 
 		function initialize($el) {
-			opts = opts || {};
-			opts = $.extend({
+			var elOpts = $.extend({
 				title: $el.data('title') || '',
 				src: $el.data('src') || ''
 			}, opts);
@@ -26,14 +25,14 @@
 			var $playButton = $('<i class="fa fa-play tim-aud-play-button"></i>').appendTo($el);
 			var $pauseButton = $('<i class="fa fa-pause tim-aud-pause-button"></i>').appendTo($el);
 
-			var $title = $('<p class="tim-aud-song-title">' + opts.title + '</p>').appendTo($el);
+			var $title = $('<p class="tim-aud-song-title">' + elOpts.title + '</p>').appendTo($el);
 			var $sliderWrap = $('<div class="tim-aud-slider-wrap"></div>').appendTo($title);
 			var $slider = $('<div class="tim-aud-slider"></div>').appendTo($sliderWrap);
 			var $sliderBar = $('<div class="tim-aud-slider-bar"></div>').appendTo($slider);
 			var $sliderHandle = $('<div class="tim-aud-slider-handle"></div>').appendTo($sliderBar);
 			var $timeRemaining = $('<p class="tim-aud-time-remaining"></p>').appendTo($slider);
 
-			var $audio = $('<audio src="' + opts.src + '" preload="none"></audio>').appendTo($el);
+			var $audio = $('<audio src="' + elOpts.src + '" preload="none"></audio>').appendTo($el);
 			var audio = $audio[0];
 
 			$playButton.on('click', play);
