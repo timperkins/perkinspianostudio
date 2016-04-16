@@ -386,12 +386,12 @@ a {
 }
 
 .gallery-section iframe {
-	// position: absolute;
-	// left: 0;
-	// top: 0;
-	// width: 100%;
-	// height: 100%;
-	// display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	display: none;
 }
 
 .gallery-section:hover .video-controls .play-button {
