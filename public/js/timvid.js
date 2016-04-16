@@ -38,8 +38,8 @@
 		}
 
 		function onPosterClick() {
-			alert('c');
 			$videoPlayer.fadeIn(200);
+			$poster.fadeOut(1000);
 			player.playVideo();
 			$controls.off('click', onPosterClick);
 		}
