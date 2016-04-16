@@ -32,6 +32,7 @@
 
 		function onPlayerReady() {
 			$videoPlayer = $section.find("iframe");
+			alert($videoPlayer.length);
 			initFluidWidth();
 			$controls.on('click', onPosterClick);
 			$controls.addClass('ready');
