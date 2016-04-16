@@ -18,13 +18,6 @@ $(function() {
 		nav: $('.nav')
 	});
 
-	$('.gallery-section').timVid({
-		video: '.gallery-video',
-		playPauseControl: '.video-controls',
-		playButton: '.play-button',
-		pauseButton: '.pause-button'
-	});
-
 	$('.audio-player').timAud();
 
 	$('.main-section').timLoad();

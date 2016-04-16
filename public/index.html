@@ -37,17 +37,12 @@
 			<img src="/images/profile-pic.png" class="profile-pic">
 			<p class="profile-text">Penny Perkins holds a Master’s Degree in Piano Performance from Brigham Young University. She loves teaching children and adults and specializes in intermediate to advanced students. Her favorite composer is Rachmaninoff.</p>
 		</section>
-		<section class="gallery-section">
-			<video 
-				class="gallery-video" 
-				src="http://media.perkinspianostudio.com/video/evening-of-concertos.mp4"
-				preload="none"
-				poster="/images/concerto-pic.png">
-			</video>
-			<div class="video-controls">
+		<section class="gallery-section" data-timvid>
+			<img src="/images/concerto-pic.png" class="poster" data-timvid-poster>
+			<div class="video-controls" data-timvid-controls>
 				<i class="fa fa-play play-button"></i>
-				<i class="fa fa-pause pause-button"></i>
 			</div>
+			<div data-timvid-video></div>
 		</section>
 		<section class="listen-section">
 			<h2 class="section-header">Listen to recent performances</h2>

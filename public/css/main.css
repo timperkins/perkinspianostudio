@@ -351,28 +351,27 @@ a {
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	cursor: pointer;
 	background: rgba(0, 0, 0, 0);
 	transition: 0.5s background;
+}
+
+.video-controls.ready {
+	cursor: pointer;
 }
 
 .gallery-section:hover .video-controls {
 	background: rgba(0, 0, 0, 0.2);
 }
 
-.gallery-section.is-playing .video-controls {
-	background: rgba(0, 0, 0, 0);
-}
-
-/* Hide ios html5 video controls */
-video::-webkit-media-controls {
-    display:none !important;
-}
-
 .video-controls i {
 	color: rgba(255, 255, 255, 0.7);
 	font-size: 60px;
 	transition: 0.5s color;
+	display: none;
+}
+
+.video-controls.ready i {
+	display: inherit;
 }
 
 @media screen and (max-width: 600px) {
@@ -381,17 +380,22 @@ video::-webkit-media-controls {
 	}
 }
 
-.video-controls .pause-button {
+.poster {
+	display: block;
+	width: 100%;
+}
+
+.gallery-section iframe {
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 	display: none;
-	color: rgba(255, 255, 255, 0);
 }
 
 .gallery-section:hover .video-controls .play-button {
 	color: rgba(255, 255, 255, 0.9);
-}
-
-.gallery-section:hover .video-controls .pause-button {
-	color: rgba(255, 255, 255, 0.2);
 }
 
 .gallery-section .video-controls i.fa:hover {
