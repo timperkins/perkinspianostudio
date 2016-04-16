@@ -46,6 +46,7 @@
 
 		function initFluidWidth() {
 			$(window).on('resize', debounce(resizeStuff, 200));
+			resizeStuff();
 		}
 
 		function resizeStuff() {
