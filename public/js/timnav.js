@@ -58,7 +58,7 @@
 			var closestSectionTop = -1;
 			var closestLink, closestSection;
 			opts.combos.forEach(function(o) {
-				var sectionTop = o.section.offset().top;
+				var sectionTop = o.section.offset().top - 2;
 				if (sectionTop <= scrollHeight && sectionTop > closestSectionTop) {
 					closestSectionTop = sectionTop;
 					closestSection = o.section;
@@ -95,4 +95,17 @@
 			};
 		}
 	};
+
+	var $contactSection = $('.contact-section');
+	$('.request-pricing-link').on('click', function() {
+		$('html, body').animate({
+			scrollTop: $contactSection.offset().top - 50
+		}, {
+			duration: 500,
+			complete: function() {
+				$contactSection.find('input:not([type="hidden"]):first').focus();
+			}
+		});
+	});
+
 })(jQuery);

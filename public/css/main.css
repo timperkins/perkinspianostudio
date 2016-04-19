@@ -11,7 +11,7 @@ html, body {
 	position: relative;
 }
 
-h1, h2, h3, h4, h5, a, span, p, blockquote, input, label {
+h1, h2, h3, h4, h5, a, span, p, blockquote, input, label, li {
 	font-weight: 100;
 	color: #444;
 	line-height: 1.5em;
@@ -236,6 +236,30 @@ a {
 	position: relative;
 }
 
+.request-pricing-link {
+	position: absolute;
+	right: 20px;
+	bottom: 20px;
+	padding: 10px 20px;
+	border-radius: 3px;
+	border: solid 1px rgba(255,255,255,0.7);
+	color: rgba(255,255,255,0.7);
+	font-size: 15px;
+	cursor: pointer;
+	transition: background 0.3s, color 0.3s;
+}
+
+@media screen and (max-height: 400px) {
+	.request-pricing-link {
+		display: none;
+	}
+}
+
+.request-pricing-link:hover {
+	background: #fff;
+	color: #333;
+}
+
 @media screen and (max-width: 750px) {
 	.jumbo-text {
 		font-size: 50px;
@@ -398,17 +422,27 @@ a {
 	color: rgba(255, 255, 255, 0.9);
 }
 
+.gallery-section .video-controls .video-label {
+	color: #31c4c6;
+	font-size: 18px;
+	position: absolute;
+	bottom: 20px;
+	right: 20px;
+}
+
 .gallery-section .video-controls i.fa:hover {
 	color: rgba(255, 255, 255, 1);
 }
 
 .listen-section {
-	padding: 50px 10px 100px 10px;
+	padding: 50px 10px 50px 10px;
+	margin-bottom: 50px;
+	border-bottom: dashed 1px #ddd;
 }
 
 @media screen and (max-width: 700px) {
 	.listen-section {
-		padding: 50px 0 100px 0;
+		padding: 50px 0 50px 0;
 	}
 }
 
@@ -493,8 +527,74 @@ a {
 	bottom: 0;
 }
 
+.adult-lessons-section {
+	position: relative;
+	width: 100%;
+	background: url('/images/inside-piano.png') no-repeat top center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.adult-lessons-section:before {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+	background: linear-gradient(
+		90deg,
+		rgba(0,0,0,0.3),
+		rgba(0,0,0,0.5)
+	);
+}
+
+.adult-lessons-section .section-content {
+	margin: 0 auto;
+	max-width: 960px;
+	padding: 70px 20px;
+	position: relative;
+}
+
+.adult-lessons-section h2 {
+	margin: 0 0 30px 0;
+	text-align: left;
+}
+
+.adult-lessons-section p {
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+
+@media screen and (max-width: 600px) {
+	.adult-lessons-section p {
+		font-size: 17px;
+	}
+}
+
+.adult-lessons-section aside {
+	border: solid 1px #fff;
+	border-radius: 10px;
+	padding: 20px 30px;
+	display: inline-block;
+}
+
+.adult-lessons-section aside li {
+	margin-left: 20px;
+	font-size: 20px;
+}
+
+@media screen and (max-width: 600px) {
+	.adult-lessons-section aside li {
+		font-size: 17px;
+	}
+}
+
 .contact-section {
 	padding: 50px 20px;
+	border-top: solid 8px #444;
 }
 
 .contact-form {

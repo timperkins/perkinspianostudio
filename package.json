@@ -19,6 +19,6 @@
     "beta": "npm run push; git push beta master",
     "beta-2": "npm run push; aws s3 sync ~/data/perkinspianostudio/public s3://beta-2.perkinspianostudio.com --delete --exclude '.DS_Store'",
     "media": "aws s3 sync ~/data/perkinspianostudio/media s3://media.perkinspianostudio.com --delete --exclude '.DS_Store'",
-    "deploy": "npm run push; aws s3 sync ~/data/perkinspianostudio/public s3://perkinspianostudio.com --delete --exclude '*/.DS_Store'"
+    "deploy": "npm run push; aws s3 sync ~/data/perkinspianostudio/public s3://www.perkinspianostudio.com --delete --exclude '*/.DS_Store'"
   }
 }

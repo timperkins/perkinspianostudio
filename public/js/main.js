@@ -10,6 +10,12 @@ $(function() {
 				link: $('.gallery-link'),
 				section: $('.gallery-section')
 			}, {
+				link: $('.studio-link'),
+				section: $('.details-section')
+			}, {
+				link: $('.adult-lessons-link'),
+				section: $('.adult-lessons-section')
+			}, {
 				link: $('.contact-link'),
 				section: $('.contact-section')
 			}],
