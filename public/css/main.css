@@ -379,6 +379,10 @@ a {
 	transition: 0.5s background;
 }
 
+.mobile .video-controls {
+	display: none;
+}
+
 .video-controls.ready {
 	cursor: pointer;
 }
@@ -409,6 +413,10 @@ a {
 	width: 100%;
 }
 
+.mobile .poster {
+	display: none;
+}
+
 .gallery-section iframe {
 	position: absolute;
 	left: 0;
@@ -416,6 +424,11 @@ a {
 	width: 100%;
 	height: 100%;
 	display: none;
+}
+
+.mobile .gallery-section iframe {
+	position: inherit;
+	display: block;
 }
 
 .gallery-section:hover .video-controls .play-button {
