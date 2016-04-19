@@ -223,7 +223,7 @@ a {
 	height: 100%;
 	background: linear-gradient(
 		transparent,
-		rgba(0,0,0,0.5)
+		rgba(0,0,0,0.6)
 	);
 }
 
@@ -289,29 +289,31 @@ a {
 }
 
 .profile-section {
-	padding: 0 20px 50px 20px;
+	padding: 0 20px 80px 20px;
 	max-width: 800px;
 	margin: 0 auto;
 	display: flex;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.profile-section {
 		flex-direction: column;
 		align-items: center;
+		padding-bottom: 20px;
 	}
 }
 
 .profile-pic {
-	width: 239px;
-	height: 336px;
+	width: 400px;
+	height: 300px;
 	max-width: 100%;
-	min-width: 239px;
+	min-width: 400px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.profile-pic {
-		order: 2;
+		height: inherit;
+		min-width: inherit;
 	}
 }
 
@@ -321,13 +323,11 @@ a {
 	margin-left: 50px;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 700px) {
 	.profile-text {
 		font-size: 18px;
-		order: 1;
 		margin-left: 0;
 		margin-bottom: 30px;
-		border-top: solid 1px #eee;
 		padding-top: 30px;
 	}
 }
