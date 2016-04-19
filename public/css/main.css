@@ -436,7 +436,6 @@ a {
 
 .listen-section {
 	padding: 50px 10px 50px 10px;
-	margin-bottom: 50px;
 	border-bottom: dashed 1px #ddd;
 }
 
@@ -465,6 +464,7 @@ a {
 
 .details-section {
 	margin-bottom: 80px;
+	padding-top: 50px;
 }
 
 @media screen and (max-width: 600px) {
